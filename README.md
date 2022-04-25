@@ -34,3 +34,8 @@ SimpleConsoleControls (SCC) makes creating Command Line Interfaces simple and ea
 
   Draws a rectangle to the screen at the specified X and Y positions. The origin point of the rectangle is the upper right hand corner.
   The rectangle design is displayed in "double pipe" characters.
+  
+  
+- Subroutine: **SetWinSize**(Columns [int], Rows [int])
+
+  Sets the main operating window size by Columns x Rows (also updates buffer size as the same).
