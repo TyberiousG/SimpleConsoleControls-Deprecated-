@@ -1,6 +1,7 @@
-﻿Module SimpleConsoleControls
+﻿Public Class Controls
     Public GlobalRows As Integer = Console.WindowHeight
     Public GlobalCols As Integer = Console.WindowWidth
+
 
     Public Sub Label(ByVal X As Integer, ByVal Y As Integer, ByVal Text As String, ByVal Optional fcolor As ConsoleColor = ConsoleColor.White, ByVal Optional bcolor As ConsoleColor = ConsoleColor.Black)
         System.Console.SetCursorPosition(X, Y)
@@ -61,7 +62,49 @@
         Console.SetWindowSize(columns, rows)
         Console.SetBufferSize(columns, rows)
     End Sub
-    Public Function PasswordField(ByVal X As Integer, ByVal Y As Integer, ByVal Width As Integer, ByVal Mask As String)
+    Public Sub DrawRectangle(ByVal X As Integer, ByVal Y As Integer, ByVal Width As Integer, ByVal Height As Integer)
+        Dim ulCorner As String = "╔"
+        Dim urCorner As String = "╗"
+        Dim llCorner As String = "╚"
+        Dim lrCorner As String = "╝"
+        Dim vert As String = "║"
+        Dim horz As String = "═"
+        Dim totHorz = Width - 2
+        Dim totVert = Height - 2
+        Console.SetCursorPosition(X, Y)
+        Console.Write(ulCorner)
+        For i As Integer = 1 To totHorz
+            Console.Write(horz)
+        Next
+        Console.Write(urCorner)
+        Console.WriteLine()
+        Dim curX As Integer = Console.CursorLeft
+        Dim curY As Integer = Console.CursorTop
+
+        For j As Integer = 1 To totVert
+            Console.SetCursorPosition(X, curY)
+            Console.Write(vert)
+            For k As Integer = 1 To totHorz
+                Console.Write(" ")
+
+            Next
+
+            Console.Write(vert)
+
+
+            Console.Write(vbCrLf)
+
+
+                curY += 1
+        Next
+        Console.SetCursorPosition(X, curY)
+        Console.Write(llCorner)
+        For l As Integer = 1 To totHorz
+            Console.Write(horz)
+        Next
+        Console.Write(lrCorner)
+    End Sub
+    Public Function PasswordField(ByVal X As Integer, ByVal Y As Integer, ByVal Width As Integer, ByVal Optional Mask As String = "*")
         Console.BackgroundColor = ConsoleColor.DarkBlue
         Console.ForegroundColor = ConsoleColor.White
         Console.SetCursorPosition(X, Y)
@@ -102,4 +145,4 @@
         Return pwd
     End Function
 
-End Module
+End Class
