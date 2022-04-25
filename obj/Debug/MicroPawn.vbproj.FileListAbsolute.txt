@@ -1,0 +1,15 @@
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\bin\Debug\MicroPawn.exe.config
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\bin\Debug\MicroPawn.exe
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\bin\Debug\MicroPawn.pdb
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\bin\Debug\MicroPawn.xml
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\bin\Debug\System.ValueTuple.dll
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\bin\Debug\System.ValueTuple.xml
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\obj\Debug\MicroPawn.vbproj.AssemblyReference.cache
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\obj\Debug\MicroPawn.vbproj.SuggestedBindingRedirects.cache
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\obj\Debug\MicroPawn.Resources.resources
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\obj\Debug\MicroPawn.vbproj.GenerateResource.cache
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\obj\Debug\MicroPawn.vbproj.CoreCompileInputs.cache
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\obj\Debug\MicroPawn.vbproj.CopyComplete
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\obj\Debug\MicroPawn.exe
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\obj\Debug\MicroPawn.xml
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\obj\Debug\MicroPawn.pdb

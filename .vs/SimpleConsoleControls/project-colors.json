@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "1c077c5c-3dc4-4726-bedb-a9458af93c25": {
+      "ProjectGuid": "1c077c5c-3dc4-4726-bedb-a9458af93c25",
+      "DisplayName": "SimpleConsoleControls",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

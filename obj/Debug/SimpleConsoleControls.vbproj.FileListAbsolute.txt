@@ -1,0 +1,13 @@
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\obj\Debug\SimpleConsoleControls.vbproj.GenerateResource.cache
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\obj\Debug\SimpleConsoleControls.vbproj.CoreCompileInputs.cache
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\bin\Debug\SimpleConsoleControls.dll.config
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\bin\Debug\SimpleConsoleControls.dll
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\bin\Debug\SimpleConsoleControls.pdb
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\bin\Debug\SimpleConsoleControls.xml
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\bin\Debug\System.ValueTuple.dll
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\bin\Debug\System.ValueTuple.xml
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\obj\Debug\SimpleConsoleControls.Resources.resources
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\obj\Debug\SimpleConsoleControls.vbproj.CopyComplete
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\obj\Debug\SimpleConsoleControls.dll
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\obj\Debug\SimpleConsoleControls.xml
+C:\Users\tygra\Desktop\MicroPawn\ConsoleApp1\obj\Debug\SimpleConsoleControls.pdb
