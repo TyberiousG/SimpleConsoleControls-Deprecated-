@@ -31,5 +31,6 @@ SimpleConsoleControls (SCC) makes creating Command Line Interfaces simple and ea
 
 
 - Subroutine: **DrawRectangle**(X [int], Y[int], Width [int], Height [int])
+
   Draws a rectangle to the screen at the specified X and Y positions. The origin point of the rectangle is the upper right hand corner.
   The rectangle design is displayed in "double pipe" characters.
