@@ -4,6 +4,9 @@ Simple Console Controls for .NET languages
 SimpleConsoleControls (SCC) makes creating Command Line Interfaces simple and easy with any .NET language. Current functions and subroutines include:
 
 
+invoked by SimpleConsoleControls.Controls
+
+
 - Subroutine: **Label**( X [int], Y [int], LabelText [string], Optional FColor [ConsoleColor], Optional BColor [ConsoleColor])
 
   Creates a label within the window at the designated X and Y starting points.
