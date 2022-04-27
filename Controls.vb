@@ -46,23 +46,28 @@
 
 
     End Function
-    Public Sub Title(ByVal Y As Integer, ByVal text As String)
+    Public Sub Title(ByVal Y As Integer, ByVal text As String, ByVal Optional bcolor As ConsoleColor = ConsoleColor.Black, ByVal Optional fcolor As ConsoleColor = ConsoleColor.White)
         Dim LabelColumns As Integer = text.Length
-
+        Dim CurrentBG = Console.BackgroundColor
+        Dim CurrentFG = Console.ForegroundColor
         Dim StartX As Integer = (GlobalCols / 2) - (LabelColumns / 2)
         Console.BackgroundColor = ConsoleColor.DarkBlue
         Console.ForegroundColor = ConsoleColor.White
-        Label(StartX, Y, text)
-        Console.ResetColor()
+        Label(StartX, Y, text, fcolor, bcolor)
+        Console.BackgroundColor = CurrentBG
+        Console.ForegroundColor = CurrentFG
     End Sub
     Public Sub SetWinSize(ByVal rows As Integer, ByVal columns As Integer)
         GlobalRows = rows
         GlobalCols = columns
 
         Console.SetWindowSize(columns, rows)
-        Console.SetBufferSize(columns, rows)
+        Console.SetBufferSize(columns + 2, rows + 2)
     End Sub
-    Public Sub DrawRectangle(ByVal X As Integer, ByVal Y As Integer, ByVal Width As Integer, ByVal Height As Integer)
+    Public Sub DrawRectangle(ByVal X As Integer, ByVal Y As Integer, ByVal Width As Integer, ByVal Height As Integer, ByVal Optional BColor As ConsoleColor = ConsoleColor.Black, ByVal Optional FColor As ConsoleColor = ConsoleColor.White)
+        Dim CurrentFG = Console.ForegroundColor
+        Dim CurrentBG = Console.BackgroundColor
+
         Dim ulCorner As String = "╔"
         Dim urCorner As String = "╗"
         Dim llCorner As String = "╚"
@@ -95,7 +100,7 @@
             Console.Write(vbCrLf)
 
 
-                curY += 1
+            curY += 1
         Next
         Console.SetCursorPosition(X, curY)
         Console.Write(llCorner)
@@ -103,6 +108,8 @@
             Console.Write(horz)
         Next
         Console.Write(lrCorner)
+        Console.BackgroundColor = CurrentBG
+        Console.ForegroundColor = CurrentFG
     End Sub
     Public Function PasswordField(ByVal X As Integer, ByVal Y As Integer, ByVal Width As Integer, ByVal Optional Mask As String = "*")
         Console.BackgroundColor = ConsoleColor.DarkBlue
