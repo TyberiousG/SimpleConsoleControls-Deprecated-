@@ -64,6 +64,22 @@
         Console.SetWindowSize(columns, rows)
         Console.SetBufferSize(columns + 2, rows + 2)
     End Sub
+
+    Public Sub ProgressBar(ByVal X As Integer, ByVal Y As Integer, ByVal Width As Integer, ByVal Val As Integer, ByVal Optional BColor As ConsoleColor = ConsoleColor.Black, ByVal Optional FColor As ConsoleColor = ConsoleColor.White)
+        Console.SetCursorPosition(X, Y)
+        Console.Write("0% ")
+        For i = 1 To Width
+            Console.Write("▒")
+        Next
+        Console.Write(" 100%")
+        Dim OneBlock As Integer = 100 / Width
+        Dim DoneBlocks As Integer = (OneBlock * Val) / Width
+        Console.SetCursorPosition(X + 3, Y)
+        For d = 1 To DoneBlocks
+            Console.Write("█")
+        Next
+    End Sub
+
     Public Sub DrawRectangle(ByVal X As Integer, ByVal Y As Integer, ByVal Width As Integer, ByVal Height As Integer, ByVal Optional BColor As ConsoleColor = ConsoleColor.Black, ByVal Optional FColor As ConsoleColor = ConsoleColor.White)
         Dim CurrentFG = Console.ForegroundColor
         Dim CurrentBG = Console.BackgroundColor
