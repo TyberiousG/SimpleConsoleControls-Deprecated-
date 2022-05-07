@@ -4,15 +4,22 @@
 
 
     Public Sub Label(ByVal X As Integer, ByVal Y As Integer, ByVal Text As String, ByVal Optional fcolor As ConsoleColor = ConsoleColor.White, ByVal Optional bcolor As ConsoleColor = ConsoleColor.Black)
+        Dim CurBG As ConsoleColor = Console.BackgroundColor
+        Dim CurFG As ConsoleColor = Console.ForegroundColor
         System.Console.SetCursorPosition(X, Y)
         Console.ForegroundColor = fcolor
         Console.BackgroundColor = bcolor
         System.Console.Write(Text)
-        Console.ResetColor()
+        Console.ForegroundColor = CurFG
+        Console.BackgroundColor = CurBG
     End Sub
-    Public Function TextField(ByVal X As Integer, ByVal Y As Integer, ByVal Width As Integer)
-        Console.BackgroundColor = ConsoleColor.DarkBlue
-        Console.ForegroundColor = ConsoleColor.White
+    Public Function TextField(ByVal X As Integer, ByVal Y As Integer, ByVal Width As Integer, ByVal Optional bcolor As ConsoleColor = ConsoleColor.Black, ByVal Optional fcolor As ConsoleColor = ConsoleColor.White, ByVal Optional Required As Boolean = False, ByVal Optional CatchEsc As Boolean = False)
+        Dim CurBG As ConsoleColor = Console.BackgroundColor
+        Dim CurFG As ConsoleColor = Console.ForegroundColor
+        Dim CursorVis As Boolean = Console.CursorVisible
+        Console.CursorVisible = True
+        Console.BackgroundColor = bcolor
+        Console.ForegroundColor = fcolor
         Console.SetCursorPosition(X, Y)
         Dim retval As String = ""
         For i As Integer = 0 To Width - 1
@@ -21,9 +28,22 @@
         Console.SetCursorPosition(X, Y)
         While 1
             Dim Capture As ConsoleKeyInfo = Console.ReadKey(True)
-
+            If CatchEsc = True And Capture.Key = ConsoleKey.Escape Then
+                Console.CursorVisible = CursorVis
+                Console.BackgroundColor = CurBG
+                Console.ForegroundColor = CurFG
+                Return "ESC"
+            End If
             If Capture.Key = ConsoleKey.Enter Then
-                Exit While
+                If retval.Length = 0 Then
+                    If Required = False Then
+                        Exit While
+                    End If
+                Else
+                    Exit While
+
+                End If
+
             ElseIf Capture.Key = ConsoleKey.Backspace Then
                 If retval.Length > 0 Then
                     retval = retval.Remove(retval.Length - 1, 1)
@@ -41,7 +61,9 @@
             End If
 
         End While
-        Console.ResetColor()
+        Console.CursorVisible = CursorVis
+        Console.BackgroundColor = CurBG
+        Console.ForegroundColor = CurFG
         Return retval
 
 
@@ -127,9 +149,14 @@
         Console.BackgroundColor = CurrentBG
         Console.ForegroundColor = CurrentFG
     End Sub
-    Public Function PasswordField(ByVal X As Integer, ByVal Y As Integer, ByVal Width As Integer, ByVal Optional Mask As String = "*")
-        Console.BackgroundColor = ConsoleColor.DarkBlue
-        Console.ForegroundColor = ConsoleColor.White
+    Public Function PasswordField(ByVal X As Integer, ByVal Y As Integer, ByVal Width As Integer, ByVal Optional Mask As String = "*", ByVal Optional BColor As ConsoleColor = ConsoleColor.Black, Optional FColor As ConsoleColor = ConsoleColor.White, ByVal Optional CatchEscape As Boolean = False)
+
+        Dim CurBG As ConsoleColor = Console.BackgroundColor
+        Dim CurFG As ConsoleColor = Console.ForegroundColor
+        Dim CursorVis As Boolean = Console.CursorVisible
+        Console.CursorVisible = True
+        Console.BackgroundColor = BColor
+        Console.ForegroundColor = FColor
         Console.SetCursorPosition(X, Y)
         For i As Integer = 0 To Width - 1
             Console.Write(" ")
@@ -140,8 +167,19 @@
 
         While (1)
             Dim i As ConsoleKeyInfo = Console.ReadKey(True)
+            If i.Key = ConsoleKey.Escape Then
+                Console.CursorVisible = CursorVis
+                Console.BackgroundColor = CurBG
+                Console.ForegroundColor = CurFG
+                Return "ESC"
+                Exit Function
+
+            End If
             If i.Key = ConsoleKey.Enter Then
-                Exit While
+                If pwd.Length > 0 Then
+                    Exit While
+                End If
+
             ElseIf i.Key = ConsoleKey.Backspace Then
                 If pwd.Length > 0 Then
                     pwd = pwd.Remove(pwd.Length - 1, 1)
@@ -163,8 +201,9 @@
         End While
 
 
-
-        Console.ResetColor()
+        Console.CursorVisible = CursorVis
+        Console.BackgroundColor = CurBG
+        Console.ForegroundColor = CurFG
         Return pwd
     End Function
 
