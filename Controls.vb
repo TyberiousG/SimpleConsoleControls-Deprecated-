@@ -2,6 +2,15 @@
     Public GlobalRows As Integer = Console.WindowHeight
     Public GlobalCols As Integer = Console.WindowWidth
 
+    Public Sub ProgressBar(ByVal X As Integer, ByVal Y As Integer, ByVal CurrentValue As Integer, ByVal MaxValue As Integer, ByVal BarWidth As Integer)
+        Dim percentComplete As Double = (CurrentValue / MaxValue) * 100
+        Dim FilledWidth As Integer = CInt(percentComplete / 100 * BarWidth)
+        Dim EmptyWidth As Integer = BarWidth - FilledWidth
+
+        Console.SetCursorPosition(X, Y)
+        Console.Write(New String("█", FilledWidth) & New String("░", EmptyWidth))
+
+    End Sub
 
     Public Sub Label(ByVal X As Integer, ByVal Y As Integer, ByVal Text As String, ByVal Optional fcolor As ConsoleColor = ConsoleColor.White, ByVal Optional bcolor As ConsoleColor = ConsoleColor.Black)
         Dim CurBG As ConsoleColor = Console.BackgroundColor
@@ -87,20 +96,7 @@
         Console.SetBufferSize(columns + 2, rows + 2)
     End Sub
 
-    Public Sub ProgressBar(ByVal X As Integer, ByVal Y As Integer, ByVal Width As Integer, ByVal Val As Integer, ByVal Optional BColor As ConsoleColor = ConsoleColor.Black, ByVal Optional FColor As ConsoleColor = ConsoleColor.White)
-        Console.SetCursorPosition(X, Y)
-        Console.Write("0% ")
-        For i = 1 To Width
-            Console.Write("▒")
-        Next
-        Console.Write(" 100%")
-        Dim OneBlock As Integer = 100 / Width
-        Dim DoneBlocks As Integer = (OneBlock * Val) / Width
-        Console.SetCursorPosition(X + 3, Y)
-        For d = 1 To DoneBlocks
-            Console.Write("█")
-        Next
-    End Sub
+
 
     Public Sub DrawRectangle(ByVal X As Integer, ByVal Y As Integer, ByVal Width As Integer, ByVal Height As Integer, ByVal Optional BColor As ConsoleColor = ConsoleColor.Black, ByVal Optional FColor As ConsoleColor = ConsoleColor.White)
         Dim CurrentFG = Console.ForegroundColor

@@ -15,7 +15,6 @@ C:\Users\tygra\Documents\GitHub\SimpleConsoleControls\bin\Debug\SimpleConsoleCon
 C:\Users\tygra\Documents\GitHub\SimpleConsoleControls\bin\Debug\SimpleConsoleControls.dll
 C:\Users\tygra\Documents\GitHub\SimpleConsoleControls\bin\Debug\SimpleConsoleControls.pdb
 C:\Users\tygra\Documents\GitHub\SimpleConsoleControls\bin\Debug\SimpleConsoleControls.xml
-C:\Users\tygra\Documents\GitHub\SimpleConsoleControls\bin\Debug\System.ValueTuple.xml
 C:\Users\tygra\Documents\GitHub\SimpleConsoleControls\obj\Debug\SimpleConsoleControls.vbproj.AssemblyReference.cache
 C:\Users\tygra\Documents\GitHub\SimpleConsoleControls\obj\Debug\SimpleConsoleControls.Resources.resources
 C:\Users\tygra\Documents\GitHub\SimpleConsoleControls\obj\Debug\SimpleConsoleControls.vbproj.GenerateResource.cache
@@ -24,3 +23,4 @@ C:\Users\tygra\Documents\GitHub\SimpleConsoleControls\obj\Debug\SimpleConsoleCon
 C:\Users\tygra\Documents\GitHub\SimpleConsoleControls\obj\Debug\SimpleConsoleControls.dll
 C:\Users\tygra\Documents\GitHub\SimpleConsoleControls\obj\Debug\SimpleConsoleControls.xml
 C:\Users\tygra\Documents\GitHub\SimpleConsoleControls\obj\Debug\SimpleConsoleControls.pdb
+C:\Users\tygra\Documents\GitHub\SimpleConsoleControls\bin\Debug\System.ValueTuple.dll
